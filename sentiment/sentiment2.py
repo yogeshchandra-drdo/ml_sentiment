@@ -16,3 +16,6 @@ for row in df:
 #df1 = df[['sentence']]
 df1 = df[df.columns[0:2]]
 print(df1)
+
+
+
