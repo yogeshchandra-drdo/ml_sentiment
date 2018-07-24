@@ -11,7 +11,7 @@ classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
 
 classifier.fit(X_train, y_train)
 
-# Predicting the Test set results
+# Predicting the Test set results.
 y_pred = classifier.predict(X_test)
 
 

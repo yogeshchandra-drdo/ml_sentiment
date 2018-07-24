@@ -2,12 +2,11 @@
 import Preprocessing 
 from Preprocessing import *
 
-
 #KERNEL SVM ALGORITHM 
 
 # Fitting Kernel SVM to the Training set
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf')
+classifier = SVC(kernel = 'rbf',random_state = 0)
 classifier.fit(X_train, y_train)
 
 
@@ -16,11 +15,11 @@ classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 
 
+# Making the Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+
 #Calculating the accuracy
 from sklearn import metrics
 acs = metrics.accuracy_score(y_test, y_pred)
 
-
-# Making the Confusion Matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)

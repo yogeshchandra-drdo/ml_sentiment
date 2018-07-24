@@ -3,7 +3,7 @@ import pandas as pd
 
 # Importing the dataset from the working directory
 #Differentiating review from sentiment using tabs & removing quotes
-dataset = pd.read_csv('amazon_cells_labelled.txt', delimiter = '\t', quoting = 3)
+dataset = pd.read_csv('yelp_labelled.txt', delimiter = '\t', quoting = 3)
 
 
 
@@ -55,10 +55,20 @@ for i in range(0, 1000):
 
 
 #Tokenizing the corpus
-from sklearn.feature_extraction.text import CountVectorizer
 
+#Unomment the following lines to Use TfidfVectorizer
+'''
+#Import and instantiate CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 #Using default parameters in CountVectorizer class
 cv = CountVectorizer()
+'''
+#comment the following lines to use TfidfVectorizer
+#Import and instantiate TfdifVectorizer
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+cv = TfidfVectorizer()
+
 
 #Fitting the corpus into variables 
 X = cv.fit_transform(corpus).toarray()

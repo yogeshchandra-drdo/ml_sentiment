@@ -2,18 +2,12 @@
 import Preprocessing 
 from Preprocessing import *
 
-# Feature Scaling
-from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
-X_train = sc.fit_transform(X_train)
-X_test = sc.transform(X_test)
-
 
 #RANDOM FOREST CLASSIFICATION ALGORITHM
 
 # Fitting Random Forest Classification to the Training set
 from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy')
+classifier = RandomForestClassifier(n_estimators = 51, criterion = 'entropy',random_state = 0)
 classifier.fit(X_train, y_train)
 
 
