@@ -56,7 +56,7 @@ for i in range(0, 1000):
 
 #Tokenizing the corpus
 
-#Unomment the following lines to Use TfidfVectorizer
+#Uncomment the following lines to Use TfidfVectorizer
 '''
 #Import and instantiate CountVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
